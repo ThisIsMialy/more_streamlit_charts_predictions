@@ -12,16 +12,16 @@ from matplotlib import pyplot as plt
 # Cache the CSV file for streamlit to load
 @st.cache_data
 def load_data():
-    return pd.read_csv('Week6/assets/cleaned_ev_ml_dataset.csv')
+    return pd.read_csv('assets/cleaned_ev_ml_dataset.csv')
 
 # Load the ML model using joblib
 @st.cache_resource
 def load_model():
-    return joblib.load('Week6/assets/ev_overload.joblib')
+    return joblib.load('assets/ev_overload.joblib')
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load('Week6/assets/ev_overload_scaler.joblib')
+    return joblib.load('assets/ev_overload_scaler.joblib')
 
 # Load data into df
 df = load_data()
